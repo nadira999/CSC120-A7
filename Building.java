@@ -1,4 +1,4 @@
-import javax.management.RuntimeErrorException;
+//import javax.management.RuntimeErrorException;
 
 public class Building {
 
@@ -61,7 +61,7 @@ public class Building {
             throw new RuntimeException("You are not inside this Building. Must call enter() before exit().");
         }
         if (this.activeFloor > 1) {
-            throw new RuntimeException("You have fallen out a window from floor #" +this.activeFloor + "!");
+            throw new RuntimeException("You have fallen out a window from floor #" + this.activeFloor + "!");
         }
         System.out.println("You have left " + this.name + ".");
         this.activeFloor = -1; // We're leaving the building, so we no longer have a valid active floor
